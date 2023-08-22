@@ -1,0 +1,16 @@
+.dragging {
+    -fx-border-width: 5;
+    -fx-border-color: darkblue;
+    -fx-background-color: white;
+}
+.normal {
+    -fx-border-width: 5;
+    -fx-border-color: #CDCDD5;
+    -fx-background-color: transparent;
+}
+.delete {
+    -fx-background-color: transparent;
+}
+.delete:hover {
+    -fx-background-color: lightgrey;
+}

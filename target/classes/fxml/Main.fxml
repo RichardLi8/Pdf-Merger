@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.pdfproject.MainController">
+   <bottom>
+      <HBox prefHeight="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Region HBox.hgrow="ALWAYS" />
+            <ButtonBar prefHeight="20.0" prefWidth="200.0">
+               <buttons>
+                  <ToggleButton fx:id="ToggleView" contentDisplay="CENTER" mnemonicParsing="false" onAction="#UpdateButton" text="PDF View" textAlignment="CENTER" />
+                  <Button fx:id="AddFilesButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#AddFiles" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../AddFiles.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="MergePDFButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#MergePDF" text="Merge PDF" textAlignment="CENTER" />
+               </buttons>
+            </ButtonBar>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="ClearButton" mnemonicParsing="false" onAction="#ClearButton" styleClass="clear-button" translateX="-2.0" translateY="3.0">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Trash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <ScrollPane fx:id="ParentPane" hbarPolicy="NEVER" onDragOver="#onDragOver" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+         <content>
+            <FlowPane fx:id="DisplayPane" alignment="CENTER" columnHalignment="CENTER" focusTraversable="true" hgap="2.0" prefWrapLength="600.0" rowValignment="TOP" styleClass="flow-pane" vgap="2.0" />
+         </content>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </ScrollPane>
+   </center>
+</BorderPane>

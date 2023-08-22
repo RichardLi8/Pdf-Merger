@@ -1,0 +1,24 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    
+}
+.flow-pane{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+.scroll-pane{
+  -fx-background-color: transparent;
+}
+.scroll-pane.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-fill: transparent;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+}
+.clear-button{
+}
